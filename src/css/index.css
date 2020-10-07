@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+body {
+	margin: 0;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	font-family: 'Permanent Marker', cursive;
+	background-color: #fcf3ec;
+}
+
+.gameBoard {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 70vw;
+	height: 60vh;
+	background-color: #0b1319;
+	border: 2.5vh solid #b88846;
+	border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75' height='75'%3E%3Cg fill='none' stroke='%23B88846' stroke-width='2'%3E%3Cpath d='M1 1h73v73H1z'/%3E%3Cpath d='M8 8h59v59H8z'/%3E%3Cpath d='M8 8h16v16H8zM51 8h16v16H51zM51 51h16v16H51zM8 51h16v16H8z'/%3E%3C/g%3E%3Cg fill='%23B88846'%3E%3Ccircle cx='16' cy='16' r='2'/%3E%3Ccircle cx='59' cy='16' r='2'/%3E%3Ccircle cx='59' cy='59' r='2'/%3E%3Ccircle cx='16' cy='59' r='2'/%3E%3C/g%3E%3C/svg%3E")
+		25;
+}
+
+.roleSide {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	width: 40vh;
+	height: 50vh;
+}
+
+.roleName {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 20%;
+	font-size: 3vh;
+	color: white;
+}
+
+.board {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 70%;
+}
+
+.boardContent {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 80%;
+}
+
+.box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	width: 7vh;
+	height: 5vh;
+	border-radius: 12%;
+}
+
+.normalNumbers {
+	font-size: 2vh;
+	color: black;
+}
+
+.crossedOutNumber {
+	text-decoration: line-through;
+	color: red;
+}
+
+.hype {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 20vh;
+	height: 20vh;
+	font-size: 10vh;
+	border: 1px solid black;
+	border-radius: 25%;
+	box-shadow: 1vh 1vh 2vh black;
+	background-color: white;
+}
+
+.throwButton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 20vh;
+	height: 3vh;
+	cursor: pointer;
+	font-size: 1.2vh;
+	user-select: none;
+	border: 0.2vh solid white;
+	background-color: #ab7e42;
+	color: white;
+}
+
+.throwButton:active {
+	animation: 0.2s clickAnimation linear;
+}
+
+@keyframes clickAnimation {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(0.9);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
